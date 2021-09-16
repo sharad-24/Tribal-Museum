@@ -6,11 +6,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="./node_modules/jquery-background-video/jquery.background-video.css">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
     crossorigin="anonymous"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.ripples/0.5.3/jquery.ripples.min.js"
+    integrity="sha512-zuZ5wVszlsRbRF/vwXD0QS/tHzBYHFzCD/BT0lI3yrWhNZFWDkkF3KPEY//WTanqxwPdZkskQ+xZo0rnfHBc5A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   <title>THE IDEA RESONATES WITHIN</title>
   <style>
@@ -28,7 +34,80 @@
 </head>
 
 <body>
-  <div class="bg-img">
+  <nav class="navbar fixed-top navbar-expand-lg navbar-light ">
+    <div class="">
+      <a class="navbar-brand" href="#"><img id="navLogo" src="assets/logo (1).png"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    </div>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent" style="flex-direction: row-reverse;">
+      <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+        <li class="nav-item active">
+          <a class="nav-link text-light" href="./index.html">Home <span class="sr-only"></span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-light" href="./IndividualActivity/index.html">Activities</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-light" href="./virtualTour/virtualTour.html">Virtual Tour</a>
+        </li>
+        <li class="nav-item ">
+          <a class="nav-link text-light" href="./Gallery/gallery.html">Gallery</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-light" href="./Information/index.html">Information</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-light" href="./Publications/publications.html">Publications</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-light" href="./contactpage/index.html">Contact</a>
+        </li>
+      </ul>
+    </div>
+    </div>
+  </nav>
+  <!-- <video autoplay muted loop id="myVideo">
+                      <source src="./assets/into-the-valley.mp4" type="video/mp4">
+                    </video>
+                    
+                    <div class="content">
+                      <h1>Heading</h1>
+                      <p>Lorem ipsum...</p>
+                      <button id="myBtn" onclick="myFunction()">Pause</button>
+                    </div> -->
+  
+  <div id="video-viewport">
+    <div class="container hero-text fade-in-bottom" data-aos="fade-down">
+      <div class="row">
+        <div class="outer">
+          <div class="box1header"></div>
+          <div class="col-xs-12 col-md-6 col-xxl-10">
+            <div class="container">
+              <div class="boxheader ">
+                <p class="oneheader text-left text-light ">TRIBAL MUSEUM</p>
+                <p class="twoheader  text-left text-warning ">WELCOMES YOU</p>
+                <p class="lead text-left text-light">It is primarily incumbent upon the institutions for example
+                  museums,
+                  whose objective is to connect itself with a large section of society.</p>
+                <img src="assets/btn11.png" alt="" class="responsive">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-6"></div>
+      </div>
+    </div>
+    <video autoplay loop muted preload width="640" height="360" class="my-background-video jquery-background-video">
+      <source src="./assets/into-the-valley.mp4" type="video/mp4" />
+      <source src="http://www.quirksmode.org/html5/videos/big_buck_bunny.webm" type="video/webm" />
+      <source src="http://www.quirksmode.org/html5/videos/big_buck_bunny.ogv" type="video/webm" />
+    </video>
+  </div>
+  
+  <!-- <div class="bg-img">
     <div class="topnav shadow rounded">
       <nav id="bg-img" class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
@@ -69,7 +148,7 @@
     <div class="container">
       <div class="row">
         <div class="outer">
-          <!-- <div class="box1header"></div> -->
+          <div class="box1header"></div>
           <div class="col-xs-12 col-md-6">
             <div class="container">
               <div class="boxheader ">
@@ -86,10 +165,14 @@
         <div class="col-6"></div>
       </div>
     </div>
-  </div>
+  </div> -->
   <section class="ideaResonates">
+    <br>
+    <br>
+    <br>
+
     <div class="container">
-      <div class="row">
+      <div class="row " data-aos="fade-down">
         <center>
           <div class="col-xs-12 col-md-7">
             <h class="jsgYlw">THE IDEA RESONATES WITHIN</h>
@@ -103,7 +186,7 @@
           </div>
         </center>
       </div><br><br>
-      <div class="row d flex justify-content-evenly align-items-center">
+      <div class="row d flex justify-content-evenly align-items-center" data-aos="fade-down">
         <div class="col-xs-12 col-md-5">
           <div class="row">
             <div class="col">
@@ -139,7 +222,7 @@
             <div class="video">
               <div class="embed-responsive embed-responsive-4by3">
                 <iframe class="embed-responsive-item" id="embed-responsive-item"
-                  src="https://www.youtube.com/embed/tgbNymZ7vqY" frameborder="0" gesture="media"
+                  src="https://www.youtube.com/embed/sKSSfNqW4j4" frameborder="0" gesture="media"
                   allow="encrypted-media" allowfullscreen></iframe>
               </div>
             </div>
@@ -644,8 +727,15 @@
       </div>
     </div>
   </footer>
-  
   <script>
+      AOS.init();
+    </script>
+  <script src="./node_modules/jquery-background-video/jquery.background-video.js"></script>
+  <script>
+
+    $(document).ready(function () {
+      $('.my-background-video').bgVideo();
+    });
     var acc = document.getElementsByClassName("accordion");
     var i;
 
@@ -660,6 +750,98 @@
         }
       });
     }
+
+  $(document).ready(function () {
+    try {
+      $('.pondImag').ripples({
+        resolution: 256,
+        perturbance: 0.04
+      });
+
+
+    }
+    catch (e) {
+      console.log(e);
+    }
+  });
+
+  $(function () {
+    $(window).on('scroll', function () {
+      if ($(window).scrollTop() > 10) {
+        $('.navbar').addClass('active');
+      } else {
+        $('.navbar').removeClass('active');
+      }
+    });
+  });
+
+  function debounce(func, wait, immediate) {
+
+    // Debounce
+    // http://davidwalsh.name/javascript-debounce-function
+
+    var timeout;
+    return function () {
+      var context = this,
+        args = arguments;
+      var later = function () {
+        timeout = null;
+        if (!immediate) {
+          func.apply(context, args);
+        }
+      };
+      var callNow = immediate && !timeout;
+      clearTimeout(timeout);
+      timeout = setTimeout(later, wait);
+      if (callNow) {
+        func.apply(context, args);
+      }
+    };
+  }
+
+  var min_w = 300; // minimum video width allowed
+  var vid_w_orig;  // original video dimensions
+  var vid_h_orig;
+
+  jQuery(function () { // runs after DOM has loaded
+
+    vid_w_orig = parseInt(jQuery('video').attr('width'));
+    vid_h_orig = parseInt(jQuery('video').attr('height'));
+    $('#debug').append("<p>DOM loaded</p>");
+
+    jQuery(window).resize(function () { resizeToCover(); });
+    jQuery(window).trigger('resize');
+  });
+
+  function resizeToCover() {
+    // set the video viewport to the window size
+    jQuery('#video-viewport').width(jQuery(window).width());
+    jQuery('#video-viewport').height(jQuery(window).height());
+
+    // use largest scale factor of horizontal/vertical
+    var scale_h = jQuery(window).width() / vid_w_orig;
+    var scale_v = jQuery(window).height() / vid_h_orig;
+    var scale = scale_h > scale_v ? scale_h : scale_v;
+
+    // don't allow scaled width < minimum video width
+    if (scale * vid_w_orig < min_w) { scale = min_w / vid_w_orig; };
+
+    // now scale the video
+    jQuery('video').width(scale * vid_w_orig);
+    jQuery('video').height(scale * vid_h_orig);
+    // and center it by scrolling the video viewport
+    jQuery('#video-viewport').scrollLeft((jQuery('video').width() - jQuery(window).width()) / 2);
+    jQuery('#video-viewport').scrollTop((jQuery('video').height() - jQuery(window).height()) / 2);
+
+    // debug output
+    jQuery('#debug').html("<p>win_w: " + jQuery(window).width() + "</p>");
+    jQuery('#debug').append("<p>win_h: " + jQuery(window).height() + "</p>");
+    jQuery('#debug').append("<p>viewport_w: " + jQuery('#video-viewport').width() + "</p>");
+    jQuery('#debug').append("<p>viewport_h: " + jQuery('#video-viewport').height() + "</p>");
+    jQuery('#debug').append("<p>video_w: " + jQuery('video').width() + "</p>");
+  }
+
+
   </script>
 </body>
 
